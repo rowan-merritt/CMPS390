@@ -36,7 +36,7 @@ int main(){
     int arr[4][4];
     int j, k; 
     int (*mptn)[4];
-    mptn = arr;
+    mptn = &(arr[0][0]);
     std::cout << "Steps a. to b. Running: \n";
     
     for(j = 0; j < 4; j++){ // loop going through the rows

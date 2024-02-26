@@ -22,25 +22,25 @@ int main(){
     
     std::cout << "Here is the contents of the array using conventional methods: \n";
     
-    for(j = 0 ; j <= 10; j++){
-        arr[j] = j;
+    for(j = 0 ; j < 10; j++){ // looping through the row
+        arr[j] = j; // replacing with 
         std::cout  << arr[j] << "\n";
     }
     
     std::cout << "Here is the contents of the array using memory pointer: \n";
     
-    int *mptn;
-    mptn = &(arr[0]);
+    int *mptn; // intializing a memory pointer
+    mptn = &(arr[0]); // using the memory pointer to reference an array
 
-    for(j = 100 ; j < 110 ; j++){
-        *mptn=j;
-        mptn++;
+    for(j = 100 ; j < 110 ; j++){ // looping through the a series of 100 to 109
+        *mptn = j; // inputting the value of j into the array that is being pointed to
+        mptn++; // without this the values don't increase correctly
     }
     
 
     mptn = &(arr[0]);
-    for(j = 0 ; j <= 10 ; j++){
+    for(j = 0 ; j < 10 ; j++){ // looping through the row
         std::cout  << *mptn << "\n";
-        mptn++;
+        mptn++; // without this the values in the row would sstay at 100
     }
 }
